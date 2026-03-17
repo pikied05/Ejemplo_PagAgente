@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { useNavigate } from "react-router";
 import { ChevronRight, ChevronLeft} from "lucide-react";
 
 interface FormData {
