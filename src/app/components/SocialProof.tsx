@@ -1,4 +1,3 @@
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Shield } from "lucide-react";
 
 export function SocialProof() {
