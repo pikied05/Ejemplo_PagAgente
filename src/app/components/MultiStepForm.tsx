@@ -14,7 +14,6 @@ interface FormData {
 }
 
 export function MultiStepForm() {
-  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({
     name: "",
