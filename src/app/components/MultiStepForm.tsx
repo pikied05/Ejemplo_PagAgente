@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useNavigate } from "react-router";
 import { ChevronRight, ChevronLeft} from "lucide-react";
-import { Link } from "react-router-dom";
 
 interface FormData {
   name: string;
@@ -58,7 +57,7 @@ export function MultiStepForm() {
     // Store form data in localStorage for the thank you page
     localStorage.setItem('leadFormData', JSON.stringify(formData));
     // Redirect to thank you page
-    navigate("/gracias");
+    window.location.href = "https://elk-child-36210967.figma.site/gracias";
   };
 
   return (
@@ -332,16 +331,16 @@ export function MultiStepForm() {
                 <ChevronRight className="w-5 h-5" />
               </button>
             ) : (
-              <Link to="/gracias">
+              
               <button
                 type="submit"
+                onClick={handleSubmit}
                 disabled={!canProceed()}
                 className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-orange-700 disabled:from-gray-300 disabled:to-gray-300 disabled:cursor-not-allowed transition-all font-semibold"
               >
                 Descargar mi Guía
                 <ChevronRight className="w-5 h-5" />
               </button>
-              </Link>
             )}
           </div>
         </form>
